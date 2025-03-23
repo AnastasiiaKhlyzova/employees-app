@@ -1,0 +1,36 @@
+@import 'variables';
+
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+);
+
+@import 'bootstrap/scss/bootstrap';
+
+body {
+  background-color: $gray-100;
+  color: $gray-800;
+}
+
+.card {
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-sm;
+  transition: $transition-base;
+}
+.btn {
+  border-radius: $border-radius;
+  transition: $transition-base;
+
+  &:hover {
+    transform: translateY(-0.125rem);
+  }
+
+  &.btn-primary {
+    box-shadow: 0 0.25rem 0.5rem rgba($primary, 0.3);
+
+    &:hover {
+      box-shadow: 0 0.5rem 0.75rem rgba($primary, 0.4);
+    }
+  }
+}

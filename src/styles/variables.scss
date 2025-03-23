@@ -1,0 +1,39 @@
+// Основные цвета
+$primary: #276699;
+$primary-dark: #3a6a25;
+$secondary: #6c757d;
+$success: #28a745;
+
+$dark: #343a40;
+$light: #f8f9fa;
+
+// Дополнительные цвета для нашей темы
+$light-blue: #81d0e4;
+$dark-green: #2c6e49;
+$blue: #4361ee;
+$purple: #7209b7;
+$orange: #f77f00;
+$light-gray: #f8f9fa;
+
+// Оттенки серого
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Радиусы скругления
+$border-radius: 0.25rem;
+$border-radius-lg: 1rem;
+
+// Тени
+$box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Переходы
+$transition-base: all 0.2s ease-in-out;

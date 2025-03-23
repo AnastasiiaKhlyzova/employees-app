@@ -1,0 +1,77 @@
+@import '../../../styles/variables.scss';
+
+.card {
+  border-radius: $border-radius-lg;
+  border: none;
+  transition: $transition-base;
+  overflow: hidden;
+  background-color: rgba($light-gray, 0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 12px rgba($dark-green, 0.08);
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba($dark-green, 0.12);
+  }
+}
+
+.employee-card {
+  background-color: rgba($light-blue, 0.1) !important;
+  border-radius: $border-radius-lg !important;
+  h5 {
+    color: $gray-900;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+    color: $gray-900;
+
+    strong {
+      color: $gray-900;
+      font-weight: 600;
+    }
+  }
+
+  .employee-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: $border-radius;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &.active {
+      background-color: rgba($success, 0.15);
+      color: $success;
+    }
+
+    &.archived {
+      background-color: rgba($secondary, 0.15);
+      color: $secondary;
+    }
+    background-color: rgba($light-gray, 0.7);
+  }
+
+  .employee-role {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: $border-radius;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    &.driver {
+      background-color: rgba($blue, 0.15);
+      color: $blue;
+    }
+
+    &.waiter {
+      background-color: rgba($purple, 0.15);
+      color: $purple;
+    }
+
+    &.cook {
+      background-color: rgba($orange, 0.15);
+      color: $orange;
+    }
+  }
+}
