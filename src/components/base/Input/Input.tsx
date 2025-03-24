@@ -13,6 +13,8 @@ interface Props {
   isInvalid?: boolean;
   invalidFeedback?: string;
   onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
+  className?: string;
+  marginBottom?: string;
 }
 
 const Input: React.FC<Props> = ({
@@ -28,9 +30,11 @@ const Input: React.FC<Props> = ({
   isInvalid = false,
   invalidFeedback,
   onKeyDown,
+  className,
+  marginBottom = 'mb-3',
 }) => {
   return (
-    <Form.Group className="mb-3" controlId={id}>
+    <Form.Group className={marginBottom} controlId={id}>
       <Form.Label>{label}</Form.Label>
       <Form.Control
         type={type}
@@ -41,6 +45,7 @@ const Input: React.FC<Props> = ({
         placeholder={placeholder}
         required={required}
         isInvalid={isInvalid}
+        className={className}
       />
       {isInvalid && invalidFeedback && (
         <Form.Control.Feedback type="invalid">

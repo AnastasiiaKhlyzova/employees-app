@@ -210,6 +210,7 @@ const EmployeeEdit: React.FC = () => {
                 id="phone"
                 name="phone"
                 label="Телефон"
+                marginBottom="mb-0"
                 type="tel"
                 value={employee.phone}
                 onChange={handleChange}
@@ -219,10 +220,11 @@ const EmployeeEdit: React.FC = () => {
                 invalidFeedback={getFieldError('phone')}
                 onKeyDown={handlePhoneKeyDown}
               />
-              <Form.Text className="text-muted">
-                Формат: +7 (XXX) XXX-XXXX
-              </Form.Text>
-
+              <div className="mb-3">
+                <Form.Text className="text-muted">
+                  Формат: +7 (XXX) XXX-XXXX
+                </Form.Text>
+              </div>
               <Input
                 id="birthday"
                 name="birthday"

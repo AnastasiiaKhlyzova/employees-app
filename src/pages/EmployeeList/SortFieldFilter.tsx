@@ -7,7 +7,6 @@ import Label from '../../components/base/Label/Label';
 import Select from '../../components/base/Select/Select';
 
 export const SortFieldFilter = () => {
-  console.log('SortFieldFilter render');
   const dispatch = useDispatch();
   const sortField = useSelector(
     (state: RootState) => state.employees.sort.field,
