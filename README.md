@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# Приложение для управления данными сотрудников
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание
 
-Currently, two official plugins are available:
+Одностраничное приложение для просмотра и редактирования данных сотрудников компании. Приложение позволяет фильтровать и сортировать список сотрудников, редактировать их данные и добавлять новых сотрудников.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Функциональность
 
-## Expanding the ESLint configuration
+- Отображение списка сотрудников с именем, должностью и телефоном
+- Фильтрация сотрудников по должности и статусу (в архиве/активные)
+- Сортировка списка по имени и дате рождения
+- Редактирование данных сотрудников
+- Добавление новых сотрудников
+- Валидация форм
+- Адаптивный дизайн
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Технологии
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React 18
+- Redux (Redux Toolkit)
+- TypeScript
+- React Router
+- SCSS для стилизации
+- Jest и React Testing Library для тестирования
+- Vite для сборки проекта
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Установка и запуск
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Предварительные требования
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- Node.js (версия 16 или выше)
+- npm (версия 8 или выше)
+
+### Установка зависимостей
+
+npm install
+
+### Запуск в режиме разработки
+
+npm run dev
+
+Приложение будет доступно по адресу [http://localhost:5173](http://localhost:5173)
+
+### Сборка для продакшена
+
+npm run build
+
+### Запуск тестов
+
+npm test
+
+## Особенности реализации
+
+- Используется Redux для управления состоянием приложения
+- Реализована валидация форм с информативными сообщениями об ошибках
+- Адаптивный дизайн для корректного отображения на разных устройствах
+- Покрытие кода тестами для обеспечения стабильности работы
+- Типизация с использованием TypeScript для предотвращения ошибок во время разработки
+
+## Тестирование
+
+Проект включает модульные тесты для компонентов и логики Redux. Тесты написаны с использованием Jest и React Testing Library.

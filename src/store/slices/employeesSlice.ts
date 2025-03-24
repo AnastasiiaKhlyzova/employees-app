@@ -9,7 +9,7 @@ import {
 const savedEmployees = loadEmployeesFromStorage();
 const employeesList = savedEmployees || initialEmployees;
 
-interface EmployeesState {
+export interface EmployeesState {
   list: Employee[];
   filteredList: Employee[];
   filter: {
